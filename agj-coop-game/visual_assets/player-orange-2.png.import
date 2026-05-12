@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dew5ovd71fbmj"
-path="res://.godot/imported/player-green.png-39eabbb416d4a53b347ed586777c8cff.ctex"
+uid="uid://b228kjiu1jj6s"
+path="res://.godot/imported/player-orange-2.png-acc751811843bb6038ee0a71aa6f00aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://visual_assets/player-green.png"
-dest_files=["res://.godot/imported/player-green.png-39eabbb416d4a53b347ed586777c8cff.ctex"]
+source_file="res://visual_assets/player-orange-2.png"
+dest_files=["res://.godot/imported/player-orange-2.png-acc751811843bb6038ee0a71aa6f00aa.ctex"]
 
 [params]
 
