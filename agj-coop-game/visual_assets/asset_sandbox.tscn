@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://b8hsbngip8t24"]
 
 [ext_resource type="TileSet" uid="uid://b60c72cv08et2" path="res://visual_assets/tile_set_wall_floor.tres" id="1_gxjq8"]
-[ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-2.tscn" id="3_57ku6"]
+[ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-visual.tscn" id="3_57ku6"]
 [ext_resource type="PackedScene" uid="uid://ccgdbo6wdth8f" path="res://visual_assets/statue.tscn" id="3_rbuu2"]
 
 [node name="asset_sandbox" type="Node2D" unique_id=986676333]
