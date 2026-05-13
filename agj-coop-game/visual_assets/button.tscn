@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://w248j1hkii5e"]
+
+[ext_resource type="Texture2D" uid="uid://mml7gvnvf2ci" path="res://visual_assets/atlas_parts/button_inactive.tres" id="1_cppmj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5bx36"]
+radius = 73.68175
+
+[node name="button" type="RigidBody2D" unique_id=253380262]
+gravity_scale = 0.0
+
+[node name="collider" type="CollisionShape2D" parent="." unique_id=1379999651]
+position = Vector2(0, 27)
+shape = SubResource("CircleShape2D_5bx36")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=1978707732]
+texture = ExtResource("1_cppmj")
