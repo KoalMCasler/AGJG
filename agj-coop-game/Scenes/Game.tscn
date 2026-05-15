@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://b7mw7bssy0w8o" path="res://Scripts/Game.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://qfsc23ageohe" path="res://Sprites/game/Tiles/simple64x_tiles6.png" id="6_bf53h"]
 [ext_resource type="Texture2D" uid="uid://d15o10rrto4ks" path="res://Sprites/game/Tiles/tilebase.png" id="7_71axn"]
-[ext_resource type="PackedScene" path="res://Scenes/Conductor.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="8"]
 [ext_resource type="Texture2D" uid="uid://cirfg6ex75uqi" path="res://Sprites/game/Tiles/rsz_tilebase.png" id="8_dahhg"]
 [ext_resource type="Texture2D" uid="uid://b3thjej3043ed" path="res://Sprites/game/Tiles/godot_tileset_7x7_64px.png" id="9_3so38"]
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="9_71axn"]
@@ -235,3 +235,5 @@ playerNum = 2
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]
+[connection signal="set_bpm" from="Conductor" to="player1" method="on_conductor_set_bpm"]
+[connection signal="set_bpm" from="Conductor" to="player2" method="on_conductor_set_bpm"]
