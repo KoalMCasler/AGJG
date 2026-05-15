@@ -359,7 +359,7 @@ texture_region_size = Vector2i(256, 256)
 0:0/0/terrains_peering_bit/top_right_corner = 0
 
 [resource]
-tile_size = Vector2i(256, 256)
+tile_size = Vector2i(64, 64)
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Wall-85"
 terrain_set_0/terrain_0/color = Color(0.25, 0.4666667, 0.5, 1)
