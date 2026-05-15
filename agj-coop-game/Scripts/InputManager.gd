@@ -1,10 +1,20 @@
 extends AnimatedSprite2D
+class_name InputManager
 
 var perfect = false
 var good = false
 var okay = false
 var current_note = null
 @export_range(1,2) var playerNum = 0
+## movement signals
+signal moveP1Up
+signal moveP1Down
+signal moveP1Left
+signal moveP1Right
+signal moveP2Up
+signal moveP2Down
+signal moveP2Left
+signal moveP2Right
 
 func _unhandled_input(event):
 	if playerNum == 1:
@@ -13,8 +23,10 @@ func _unhandled_input(event):
 			if event.is_action_pressed(input, false):
 				if current_note != null:
 					if perfect:
+						emit_signal("moveP1Up")
 						current_note.destroy(3)
 					elif good:
+						emit_signal("moveP1Up")
 						current_note.destroy(2)
 					elif okay:
 						current_note.destroy(1)
@@ -28,8 +40,10 @@ func _unhandled_input(event):
 			if event.is_action_pressed(input, false):
 				if current_note != null:
 					if perfect:
+						emit_signal("moveP1Down")
 						current_note.destroy(3)
 					elif good:
+						emit_signal("moveP1Down")
 						current_note.destroy(2)
 					elif okay:
 						current_note.destroy(1)
@@ -43,8 +57,10 @@ func _unhandled_input(event):
 			if event.is_action_pressed(input, false):
 				if current_note != null:
 					if perfect:
+						emit_signal("moveP1Left")
 						current_note.destroy(3)
 					elif good:
+						emit_signal("moveP1Left")
 						current_note.destroy(2)
 					elif okay:
 						current_note.destroy(1)
@@ -58,8 +74,10 @@ func _unhandled_input(event):
 			if event.is_action_pressed(input, false):
 				if current_note != null:
 					if perfect:
+						emit_signal("moveP1Right")
 						current_note.destroy(3)
 					elif good:
+						emit_signal("moveP1Right")
 						current_note.destroy(2)
 					elif okay:
 						current_note.destroy(1)
@@ -74,8 +92,10 @@ func _unhandled_input(event):
 			if event.is_action_pressed(input, false):
 				if current_note != null:
 					if perfect:
+						emit_signal("moveP2Down")
 						current_note.destroy(3)
 					elif good:
+						emit_signal("moveP2Down")
 						current_note.destroy(2)
 					elif okay:
 						current_note.destroy(1)
@@ -89,8 +109,10 @@ func _unhandled_input(event):
 			if event.is_action_pressed(input, false):
 				if current_note != null:
 					if perfect:
+						emit_signal("moveP2Up")
 						current_note.destroy(3)
 					elif good:
+						emit_signal("moveP2Up")
 						current_note.destroy(2)
 					elif okay:
 						current_note.destroy(1)
@@ -104,8 +126,10 @@ func _unhandled_input(event):
 			if event.is_action_pressed(input, false):
 				if current_note != null:
 					if perfect:
+						emit_signal("moveP2Left")
 						current_note.destroy(3)
 					elif good:
+						emit_signal("moveP2Left")
 						current_note.destroy(2)
 					elif okay:
 						current_note.destroy(1)
@@ -119,8 +143,10 @@ func _unhandled_input(event):
 			if event.is_action_pressed(input, false):
 				if current_note != null:
 					if perfect:
+						emit_signal("moveP2Right")
 						current_note.destroy(3)
 					elif good:
+						emit_signal("moveP2Right")
 						current_note.destroy(2)
 					elif okay:
 						current_note.destroy(1)

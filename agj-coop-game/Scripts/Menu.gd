@@ -1,4 +1,5 @@
 extends Control
+class_name Menu
 
 func _on_Start_Button_button_down():
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), 

@@ -1,4 +1,10 @@
 extends Control
+class_name GameManager
+
+@export var player1Input: InputManager
+@export var player2Input: InputManager
+@export var player1:PlayerController
+@export var player2:PlayerController
 
 var score = 0
 var combo = 0
@@ -26,9 +32,6 @@ var rand = 0
 var note = load("res://Scenes/Note.tscn")
 var instance1
 var instance2
-
-@export var p1Tracker:Node2D
-@export var p2Tracker:Node2D
 
 @export var p1BSpawn:Node2D
 @export var p2Bspawn:Node2D
