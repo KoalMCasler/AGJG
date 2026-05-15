@@ -18,11 +18,11 @@ var time_off_beat = 0.0
 
 signal beat(position)
 signal measure(position)
-
+signal set_bpm(bpm: int)
 
 func _ready():
 	sec_per_beat = 60.0 / bpm
-
+	emit_signal("set_bpm", bpm)
 
 func _physics_process(_delta):
 	if playing:

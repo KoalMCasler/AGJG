@@ -1,0 +1,40 @@
+[gd_resource type="Theme" format=3 uid="uid://ddgxalkafhoyf"]
+
+[ext_resource type="FontFile" uid="uid://deddfaan614cu" path="res://Fonts/SmoochSans-VariableFont_wght.ttf" id="1_d0mwm"]
+[ext_resource type="StyleBox" uid="uid://bh344wbp5codk" path="res://visual_assets/theme/button_disabled.tres" id="2_hewam"]
+[ext_resource type="StyleBox" uid="uid://dkbadqd4b5867" path="res://visual_assets/theme/button_active.tres" id="3_icjwc"]
+[ext_resource type="StyleBox" uid="uid://b72ov5eypanop" path="res://visual_assets/theme/button_normal.tres" id="4_mamj3"]
+[ext_resource type="FontFile" uid="uid://bfui2ec2pbd03" path="res://Fonts/BrunoAceSC-Regular.ttf" id="5_hewam"]
+[ext_resource type="StyleBox" uid="uid://buoori4skiq4a" path="res://visual_assets/theme/style_box_gradient.tres" id="5_icjwc"]
+
+[resource]
+BoxContainer/constants/separation = 12
+Button/colors/font_color = Color(0.902267, 0.7284478, 0.9172005, 1)
+Button/colors/font_disabled_color = Color(0.5563201, 0.0732, 0.61, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0.9019608, 0.7294118, 0.91764706, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 2
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_d0mwm")
+Button/styles/disabled = ExtResource("2_hewam")
+Button/styles/focus = ExtResource("3_icjwc")
+Button/styles/hover = ExtResource("3_icjwc")
+Button/styles/hover_pressed = ExtResource("3_icjwc")
+Button/styles/normal = ExtResource("4_mamj3")
+Button/styles/pressed = ExtResource("4_mamj3")
+Label/colors/font_color = Color(0.5803922, 0.9137255, 0.9372549, 1)
+Label/colors/font_outline_color = Color(0.5803922, 0.9137255, 0.9372549, 1)
+Label/colors/font_shadow_color = Color(0.08800003, 0, 0.16, 0.6627451)
+Label/constants/outline_size = 1
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_d0mwm")
+Panel/styles/panel = ExtResource("5_icjwc")
+Title/base_type = &"Label"
+Title/colors/font_color = Color(0.827451, 0.54509807, 0.85490197, 1)
+Title/colors/font_outline_color = Color(0.827451, 0.54509807, 0.85490197, 1)
+Title/constants/outline_size = 0
+Title/font_sizes/font_size = 48
+Title/fonts/font = ExtResource("5_hewam")

@@ -15,6 +15,11 @@ run/main_scene="uid://dwfd7yjpcv7wm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[gui]
+
+theme/custom="uid://ddgxalkafhoyf"
+theme/custom_font="uid://deddfaan614cu"
+
 [input]
 
 P1up={
