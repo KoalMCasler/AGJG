@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://byd8flmhpjb7s"]
+
+[ext_resource type="Texture2D" uid="uid://dnhgt5hup14ex" path="res://visual_assets/button_1_64.png" id="1_1cmwl"]
+[ext_resource type="Script" uid="uid://dlbgry6g5qtkm" path="res://Scripts/button.gd" id="2_0kpiu"]
+[ext_resource type="Texture2D" uid="uid://cyt0p7bwm50xe" path="res://visual_assets/button_3_64.png" id="3_nrk2b"]
+[ext_resource type="Texture2D" uid="uid://b1fgylhnw5xxm" path="res://visual_assets/button_5_64.png" id="4_c4mwi"]
+[ext_resource type="Texture2D" uid="uid://cdxtw4jv3n6c4" path="res://visual_assets/button_2_64.png" id="5_ur6nl"]
+[ext_resource type="Texture2D" uid="uid://c5aio4u43mmlh" path="res://visual_assets/button_4_64.png" id="6_rmklx"]
+[ext_resource type="Texture2D" uid="uid://cuu2umoc56y7i" path="res://visual_assets/button_6_64.png" id="7_q5xx2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kpiu"]
+size = Vector2(64, 64)
+
+[node name="Button" type="Sprite2D" unique_id=793311492]
+z_index = 1
+texture = ExtResource("1_1cmwl")
+script = ExtResource("2_0kpiu")
+buttonStyle = 1
+buttonOptionsUp = Array[Texture2D]([ExtResource("1_1cmwl"), ExtResource("3_nrk2b"), ExtResource("4_c4mwi")])
+buttonOptionsDown = Array[Texture2D]([ExtResource("5_ur6nl"), ExtResource("6_rmklx"), ExtResource("7_q5xx2")])
+
+[node name="Area2D" type="Area2D" parent="." unique_id=752278317]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1812204480]
+shape = SubResource("RectangleShape2D_0kpiu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
