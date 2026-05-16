@@ -3,7 +3,7 @@ class_name PlayerController
 
 @export var game:GameManager
 ## Movemtent variables
-const tileSize: Vector2 = Vector2(64,64)
+const tileSize: Vector2 = Vector2(256,256)
 var spriteNodePosTween: Tween
 
 ## Player skin variables
