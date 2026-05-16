@@ -19,8 +19,12 @@ func _process(delta: float):
 		self.texture = buttonOptionsDown[buttonStyle]
 	else:
 		self.texture = buttonOptionsUp[buttonStyle]
-	if(isActivated and pairedButton.isActivated and !targetObject.gateIsOpen):
-		targetObject.open_gate()
+	if (pairedButton != null):
+		if(isActivated and pairedButton.isActivated and !targetObject.gateIsOpen):
+			targetObject.open_gate()
+	else:
+		if(isActivated and !targetObject.gateIsOpen):
+			targetObject.open_gate()
 
 
 func _on_area_2d_body_entered(body: PlayerController):
