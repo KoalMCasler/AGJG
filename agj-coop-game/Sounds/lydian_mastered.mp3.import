@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/lydian_mastered.mp3-c0c8318f893ea7bbfe6456fb6
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

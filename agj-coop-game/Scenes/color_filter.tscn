@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ce6611p4syrke"]
+
+[ext_resource type="Script" uid="uid://b2k2fowi68l4u" path="res://Scenes/color_filter.gd" id="1_uv2ge"]
+
+[node name="ColorFilter1" type="Polygon2D" unique_id=549267942]
+z_index = 1
+color = Color(0.83137256, 0.30980393, 0.42745098, 0.88235295)
+polygon = PackedVector2Array(-128, -128, -128, 128, 128, 128, 128, -127.99997)
+script = ExtResource("1_uv2ge")
