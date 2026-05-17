@@ -6,6 +6,7 @@
 size = Vector2(187, 208)
 
 [node name="statue" type="RigidBody2D" unique_id=863541795]
+y_sort_enabled = true
 gravity_scale = 0.0
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=1131248547]

@@ -67,11 +67,11 @@ volume_db = -15.0
 bpm = 120
 
 [node name="P1BeatSpawn" type="Node2D" parent="." unique_id=1049024763]
-position = Vector2(-2600, -1700)
+position = Vector2(-2600, -1840)
 scale = Vector2(5, 5)
 
 [node name="P2BeatSpawn" type="Node2D" parent="." unique_id=1246772108]
-position = Vector2(2600, -1700)
+position = Vector2(2600, -1840)
 scale = Vector2(5, 5)
 
 [node name="P1BeatTracker" parent="." unique_id=44705561 instance=ExtResource("6_2brj3")]

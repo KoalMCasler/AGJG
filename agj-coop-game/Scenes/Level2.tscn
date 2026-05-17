@@ -67,11 +67,11 @@ volume_db = -15.0
 bpm = 120
 
 [node name="P1BeatSpawn" type="Node2D" parent="." unique_id=1049024763]
-position = Vector2(-2600, -1700)
+position = Vector2(-2600, -1840)
 scale = Vector2(5, 5)
 
 [node name="P2BeatSpawn" type="Node2D" parent="." unique_id=1246772108]
-position = Vector2(2600, -1700)
+position = Vector2(2600, -1840)
 scale = Vector2(5, 5)
 
 [node name="P1BeatTracker" parent="." unique_id=44705561 instance=ExtResource("9_utdxf")]
@@ -105,6 +105,7 @@ scale = Vector2(4, 4)
 targetObject = NodePath("../gate")
 
 [node name="ColorFilter3" parent="." unique_id=1344028610 node_paths=PackedStringArray("filterOver") instance=ExtResource("9_ejprb")]
+position = Vector2(109, 680)
 color = Color(0.62352943, 0.6039216, 0.06666667, 0.88235295)
 filterOver = NodePath("../Button2")
 
@@ -113,6 +114,7 @@ z_index = 2
 position = Vector2(-387, 128)
 
 [node name="ColorFilter4" parent="." unique_id=204243474 node_paths=PackedStringArray("filterOver") instance=ExtResource("9_ejprb")]
+position = Vector2(-435, 504)
 color = Color(0.6230207, 0.6041419, 0.0651265, 0.88235295)
 filterOver = NodePath("../gate")
 
@@ -121,6 +123,7 @@ z_index = 2
 position = Vector2(381, -128)
 
 [node name="ColorFilter2" parent="." unique_id=1811742246 node_paths=PackedStringArray("filterOver") instance=ExtResource("9_ejprb")]
+position = Vector2(-1227, 728)
 filterOver = NodePath("../gate2")
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
