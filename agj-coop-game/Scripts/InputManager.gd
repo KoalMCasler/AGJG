@@ -29,7 +29,8 @@ func _unhandled_input(event):
 						emit_signal("moveP1Up")
 						current_note.destroy(2)
 					elif okay:
-						current_note.destroy(1)
+						emit_signal("moveP1Up")
+						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
 				frame = 1
@@ -46,7 +47,8 @@ func _unhandled_input(event):
 						emit_signal("moveP1Down")
 						current_note.destroy(2)
 					elif okay:
-						current_note.destroy(1)
+						emit_signal("moveP1Down")
+						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
 				frame = 1
@@ -63,7 +65,8 @@ func _unhandled_input(event):
 						emit_signal("moveP1Left")
 						current_note.destroy(2)
 					elif okay:
-						current_note.destroy(1)
+						emit_signal("moveP1Left")
+						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
 				frame = 1
@@ -80,7 +83,8 @@ func _unhandled_input(event):
 						emit_signal("moveP1Right")
 						current_note.destroy(2)
 					elif okay:
-						current_note.destroy(1)
+						emit_signal("moveP1Right")
+						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
 				frame = 1
@@ -98,7 +102,8 @@ func _unhandled_input(event):
 						emit_signal("moveP2Down")
 						current_note.destroy(2)
 					elif okay:
-						current_note.destroy(1)
+						emit_signal("moveP2Down")
+						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
 				frame = 1
@@ -115,7 +120,8 @@ func _unhandled_input(event):
 						emit_signal("moveP2Up")
 						current_note.destroy(2)
 					elif okay:
-						current_note.destroy(1)
+						emit_signal("moveP2Up")
+						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
 				frame = 1
@@ -132,7 +138,8 @@ func _unhandled_input(event):
 						emit_signal("moveP2Left")
 						current_note.destroy(2)
 					elif okay:
-						current_note.destroy(1)
+						emit_signal("moveP2Left")
+						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
 				frame = 1
@@ -149,7 +156,8 @@ func _unhandled_input(event):
 						emit_signal("moveP2Right")
 						current_note.destroy(2)
 					elif okay:
-						current_note.destroy(1)
+						emit_signal("moveP2Right")
+						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
 				frame = 1
