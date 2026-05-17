@@ -1,16 +1,45 @@
 [gd_scene format=3 uid="uid://ccgdbo6wdth8f"]
 
 [ext_resource type="Texture2D" uid="uid://bvfnkt73y4cuw" path="res://visual_assets/gdj-discobolus-256px-lit.png" id="1_3x845"]
+[ext_resource type="Script" uid="uid://beupcswaenijg" path="res://Scripts/statue.gd" id="1_f324d"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f324d"]
-size = Vector2(187, 208)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3x845"]
+size = Vector2(224, 224)
 
 [node name="statue" type="RigidBody2D" unique_id=863541795]
+collision_layer = 6
+collision_mask = 6
 gravity_scale = 0.0
+script = ExtResource("1_f324d")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=1131248547]
 texture = ExtResource("1_3x845")
 
-[node name="collision" type="CollisionShape2D" parent="." unique_id=794972878]
-position = Vector2(-7.5, 104)
-shape = SubResource("RectangleShape2D_f324d")
+[node name="collider" type="CollisionShape2D" parent="." unique_id=1324543701]
+position = Vector2(0, 112)
+shape = SubResource("RectangleShape2D_3x845")
+
+[node name="RayCast2DUp" type="RayCast2D" parent="." unique_id=663736453]
+position = Vector2(0, -16)
+target_position = Vector2(0, -144)
+collision_mask = 3
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="RayCast2DDown" type="RayCast2D" parent="." unique_id=1290317052]
+position = Vector2(0, 240)
+target_position = Vector2(0, 144)
+collision_mask = 3
+hit_from_inside = true
+
+[node name="RayCast2DLeft" type="RayCast2D" parent="." unique_id=1915528655]
+position = Vector2(-128, 112)
+target_position = Vector2(-144, 0)
+collision_mask = 3
+hit_from_inside = true
+
+[node name="RayCast2DRight" type="RayCast2D" parent="." unique_id=603419208]
+position = Vector2(128, 112)
+target_position = Vector2(144, 0)
+collision_mask = 3
+hit_from_inside = true
