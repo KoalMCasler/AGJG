@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b53xdtfug0855" path="res://visual_assets/player-green-2.png" id="3_0omgb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxb2x"]
-size = Vector2(128, 128)
+size = Vector2(224, 224)
 
 [sub_resource type="Animation" id="Animation_61rff"]
 length = 0.001
@@ -551,11 +551,15 @@ _data = {
 &"push": SubResource("Animation_0050k")
 }
 
-[node name="player_visual" type="CharacterBody2D" unique_id=1039279320]
+[node name="player_visual" type="CharacterBody2D" unique_id=1039279320 node_paths=PackedStringArray("animator", "polygons_forward", "polygons_backward", "skeleton")]
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_rxb2x")
 skinOptions = Array[Texture2D]([ExtResource("1_61rff"), ExtResource("3_0omgb")])
+animator = NodePath("animator")
+polygons_forward = NodePath("polygons_forward")
+polygons_backward = NodePath("polygons_backward")
+skeleton = NodePath("skeleton")
 
 [node name="collider" type="CollisionShape2D" parent="." unique_id=2099645160]
 position = Vector2(64, 432)
@@ -802,7 +806,7 @@ rest = Transform2D(1, 0, 0, 1, -1, 74)
 [node name="foot_left" type="Bone2D" parent="skeleton/hips/thigh_left/calf_left" unique_id=567311762]
 position = Vector2(-4, 88)
 rotation = 0.14189705
-scale = Vector2(2.5199988, 0.99999774)
+scale = Vector2(2.5199988, 0.99999726)
 rest = Transform2D(2.4946725, 0.3563818, -0.14142135, 0.98994946, -4, 88)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -814,26 +818,26 @@ libraries/player = SubResource("AnimationLibrary_0hnbm")
 autoplay = &"player/bop"
 
 [node name="RayCast2DUp" type="RayCast2D" parent="." unique_id=1297725946]
-position = Vector2(64, 352)
+position = Vector2(64, 304)
 target_position = Vector2(0, -144)
 collision_mask = 3
 hit_from_inside = true
 collide_with_areas = true
 
 [node name="RayCast2DDown" type="RayCast2D" parent="." unique_id=1235931100]
-position = Vector2(64, 512)
+position = Vector2(64, 560)
 target_position = Vector2(0, 144)
 collision_mask = 3
 hit_from_inside = true
 
 [node name="RayCast2DLeft" type="RayCast2D" parent="." unique_id=1740967611]
-position = Vector2(-16, 432)
+position = Vector2(-64, 432)
 target_position = Vector2(-144, 0)
 collision_mask = 3
 hit_from_inside = true
 
 [node name="RayCast2DRight" type="RayCast2D" parent="." unique_id=1469086618]
-position = Vector2(144, 432)
+position = Vector2(192, 432)
 target_position = Vector2(144, 0)
 collision_mask = 3
 hit_from_inside = true

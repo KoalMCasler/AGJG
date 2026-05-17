@@ -27,5 +27,5 @@ func _process(delta: float):
 			targetObject.open_gate()
 
 
-func _on_area_2d_body_entered(body: PlayerController):
+func _on_area_2d_body_entered(body: Node2D):
 	isActivated = true

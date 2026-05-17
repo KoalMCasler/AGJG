@@ -12,10 +12,10 @@ var spriteNodePosTween: Tween
 
 ## Animation variables
 @export var offset: int = 148
-@onready var animator : AnimationPlayer = $animator
-@onready var polygons_forward = $polygons_forward
-@onready var polygons_backward = $polygons_backward
-@onready var skeleton = $skeleton
+@export var animator : AnimationPlayer
+@export var polygons_forward : Node2D
+@export var polygons_backward : Node2D
+@export var skeleton :Skeleton2D
 
 func _ready():
 	SetControlSgnals(playerNum)
@@ -80,6 +80,11 @@ func moveUp():
 	animateMovement(Vector2.UP)
 	if !$RayCast2DUp.is_colliding():
 		global_position += Vector2.UP * tileSize
+	elif $RayCast2DUp.is_colliding() && $RayCast2DUp.get_collider().name.contains("statue"):
+		var statue : Statue = $RayCast2DUp.get_collider()
+		if statue.upClear:
+			global_position += Vector2.UP * tileSize
+			$RayCast2DUp.get_collider().moveDirection(1)
 	
 	
 func moveDown():
@@ -87,17 +92,30 @@ func moveDown():
 	animateMovement(Vector2.DOWN)
 	if !$RayCast2DDown.is_colliding():
 		global_position += Vector2.DOWN * tileSize
-	
+	elif $RayCast2DDown.is_colliding() && $RayCast2DDown.get_collider().name.contains("statue"):
+		var statue : Statue = $RayCast2DDown.get_collider()
+		if statue.downClear:
+			global_position += Vector2.DOWN * tileSize
+			$RayCast2DDown.get_collider().moveDirection(2)
 
 func moveLeft():
 	print("Moved player" + str(playerNum) + " Left")
 	animateMovement(Vector2.LEFT)
 	if !$RayCast2DLeft.is_colliding():
 		global_position += Vector2.LEFT * tileSize
-	
+	elif $RayCast2DLeft.is_colliding() && $RayCast2DLeft.get_collider().name.contains("statue"):
+		var statue : Statue = $RayCast2DLeft.get_collider()
+		if statue.leftClear:
+			global_position += Vector2.LEFT * tileSize
+			$RayCast2DLeft.get_collider().moveDirection(3)
 
 func moveRight():
 	print("Moved player" + str(playerNum) + " Right")
 	animateMovement(Vector2.RIGHT)
 	if !$RayCast2DRight.is_colliding():
 		global_position += Vector2.RIGHT * tileSize
+	elif $RayCast2DRight.is_colliding() && $RayCast2DRight.get_collider().name.contains("statue"):
+		var statue : Statue = $RayCast2DRight.get_collider()
+		if statue.rightClear:
+			global_position += Vector2.RIGHT * tileSize
+			$RayCast2DRight.get_collider().moveDirection(4)
