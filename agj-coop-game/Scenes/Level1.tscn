@@ -52,7 +52,7 @@ game = NodePath("..")
 playerNum = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1663927216]
-zoom = Vector2(0.2, 0.17)
+zoom = Vector2(0.33, 0.281)
 editor_draw_limits = true
 
 [node name="Conductor" parent="." unique_id=923597594 instance=ExtResource("7_ug0sv")]

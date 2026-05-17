@@ -57,7 +57,7 @@ game = NodePath("..")
 playerNum = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1663927216]
-zoom = Vector2(0.2, 0.17)
+zoom = Vector2(0.33, 0.281)
 editor_draw_limits = true
 
 [node name="Conductor" parent="." unique_id=923597594 instance=ExtResource("4_cwt8c")]
@@ -93,17 +93,17 @@ position = Vector2(-1402, 800)
 [node name="statue2" parent="." unique_id=1506237593 instance=ExtResource("8_rbgxu")]
 position = Vector2(-634, 24)
 
+[node name="statue6" parent="." unique_id=1355429352 instance=ExtResource("8_rbgxu")]
+position = Vector2(653, -480)
+
 [node name="statue3" parent="." unique_id=417253924 instance=ExtResource("8_rbgxu")]
 position = Vector2(637, -232)
-
-[node name="statue4" parent="." unique_id=744011658 instance=ExtResource("8_rbgxu")]
-position = Vector2(1413, -992)
 
 [node name="statue5" parent="." unique_id=360765363 instance=ExtResource("8_rbgxu")]
 position = Vector2(-641, 288)
 
-[node name="statue6" parent="." unique_id=1355429352 instance=ExtResource("8_rbgxu")]
-position = Vector2(653, -480)
+[node name="statue4" parent="." unique_id=744011658 instance=ExtResource("8_rbgxu")]
+position = Vector2(1413, -992)
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]

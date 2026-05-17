@@ -60,7 +60,7 @@ game = NodePath("..")
 playerNum = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1663927216]
-zoom = Vector2(0.2, 0.17)
+zoom = Vector2(0.33, 0.281)
 editor_draw_limits = true
 
 [node name="Conductor" parent="." unique_id=923597594 instance=ExtResource("4_qok1m")]
@@ -93,39 +93,33 @@ playerNum = 2
 [node name="Button" parent="." unique_id=793311492 node_paths=PackedStringArray("pairedButton", "targetObject") instance=ExtResource("8_fdpi5")]
 z_index = 2
 position = Vector2(2176, -1152)
-scale = Vector2(4, 4)
 pairedButton = NodePath("../Button2")
 targetObject = NodePath("../gate")
 
 [node name="Button2" parent="." unique_id=1338719184 node_paths=PackedStringArray("pairedButton", "targetObject") instance=ExtResource("8_fdpi5")]
 z_index = 2
 position = Vector2(-2173, -1143)
-scale = Vector2(4, 4)
 pairedButton = NodePath("../Button")
 targetObject = NodePath("../gate2")
 
 [node name="Button3" parent="." unique_id=311522798 node_paths=PackedStringArray("targetObject") instance=ExtResource("8_fdpi5")]
 z_index = 2
 position = Vector2(1157, -375)
-scale = Vector2(4, 4)
 targetObject = NodePath("../gate3")
 
 [node name="Button4" parent="." unique_id=1400845832 node_paths=PackedStringArray("targetObject") instance=ExtResource("8_fdpi5")]
 z_index = 2
 position = Vector2(-1155, 128)
-scale = Vector2(4, 4)
 targetObject = NodePath("../gate4")
 
 [node name="Button5" parent="." unique_id=1657657411 node_paths=PackedStringArray("targetObject") instance=ExtResource("8_fdpi5")]
 z_index = 2
 position = Vector2(-1403, 640)
-scale = Vector2(4, 4)
 targetObject = NodePath("../gate5")
 
 [node name="Button6" parent="." unique_id=936021206 node_paths=PackedStringArray("targetObject") instance=ExtResource("8_fdpi5")]
 z_index = 2
 position = Vector2(1405, 648)
-scale = Vector2(4, 4)
 targetObject = NodePath("../gate6")
 
 [node name="ColorFilter1" parent="." unique_id=549267942 node_paths=PackedStringArray("filterOver") instance=ExtResource("9_q8p40")]

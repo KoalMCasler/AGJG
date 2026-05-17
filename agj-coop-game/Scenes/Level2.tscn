@@ -58,7 +58,7 @@ game = NodePath("..")
 playerNum = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1663927216]
-zoom = Vector2(0.2, 0.17)
+zoom = Vector2(0.33, 0.281)
 editor_draw_limits = true
 
 [node name="Conductor" parent="." unique_id=923597594 instance=ExtResource("7_sgc6j")]
@@ -91,7 +91,6 @@ playerNum = 2
 [node name="Button" parent="." unique_id=793311492 node_paths=PackedStringArray("targetObject") instance=ExtResource("8_p4u3k")]
 z_index = 2
 position = Vector2(-1155, 384)
-scale = Vector2(4, 4)
 targetObject = NodePath("../gate2")
 
 [node name="ColorFilter1" parent="." unique_id=549267942 node_paths=PackedStringArray("filterOver") instance=ExtResource("9_ejprb")]
@@ -101,7 +100,6 @@ filterOver = NodePath("../Button")
 [node name="Button2" parent="." unique_id=1338719184 node_paths=PackedStringArray("targetObject") instance=ExtResource("8_p4u3k")]
 z_index = 2
 position = Vector2(1149, -384)
-scale = Vector2(4, 4)
 targetObject = NodePath("../gate")
 
 [node name="ColorFilter3" parent="." unique_id=1344028610 node_paths=PackedStringArray("filterOver") instance=ExtResource("9_ejprb")]
