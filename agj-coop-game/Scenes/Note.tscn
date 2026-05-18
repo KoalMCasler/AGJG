@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdqmt3gq4u4r6"]
 
-[ext_resource type="SpriteFrames" path="res://Frames/note_frames.tres" id="1"]
 [ext_resource type="Texture2D" uid="uid://cevc66xycq4xk" path="res://Sprites/game/particles/star.png" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://c8lkse5pvr1v4" path="res://visual_assets/atlas_parts/arrow_sprite_frames_small.tres" id="2_8r7j7"]
 [ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="3"]
 [ext_resource type="Script" uid="uid://xcbvujnvete0" path="res://Scripts/Note.gd" id="4"]
 
@@ -13,7 +13,8 @@ scale = Vector2(5, 5)
 script = ExtResource("4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=366540537]
-sprite_frames = ExtResource("1")
+sprite_frames = ExtResource("2_8r7j7")
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1192138976]
 shape = SubResource("1")

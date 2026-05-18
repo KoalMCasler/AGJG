@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://drv7dvkrfp7li"]
+
+[ext_resource type="Script" uid="uid://dfrok1nqx7lmw" path="res://Scripts/win_zone.gd" id="1_sjekq"]
+[ext_resource type="Texture2D" uid="uid://dcchhnwsisrrt" path="res://visual_assets/win_zone.png" id="2_v3e83"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjekq"]
+size = Vector2(256, 256)
+
+[node name="winZone" type="Area2D" unique_id=914968524]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_sjekq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=178209326]
+texture = ExtResource("2_v3e83")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1871973358]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_sjekq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
