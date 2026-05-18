@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="8_ktnig"]
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_p6pjf"]
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_m7vvj"]
-[ext_resource type="PackedScene" uid="uid://duy7n66pbocpl" path="res://Scenes/ArrowButton.tscn" id="9_nfsas"]
+[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="9_nfsas"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="12_ncjpd"]
 
 [node name="Level3" type="Control" unique_id=260818078 node_paths=PackedStringArray("player1Input", "player2Input", "player1", "player2", "p1BSpawn", "p2Bspawn")]
@@ -72,10 +72,10 @@ volume_db = -15.0
 bpm = 120
 
 [node name="P1BeatSpawn" type="Node2D" parent="." unique_id=1049024763]
-position = Vector2(-2600, -1536)
+position = Vector2(-2595, -1744)
 
 [node name="P2BeatSpawn" type="Node2D" parent="." unique_id=1246772108]
-position = Vector2(2600, -1536)
+position = Vector2(2605, -1744)
 
 [node name="P1BeatTracker" parent="." unique_id=44705561 instance=ExtResource("9_nfsas")]
 z_index = 11
