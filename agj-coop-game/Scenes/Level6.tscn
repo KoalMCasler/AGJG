@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://hccef6tra2ct"]
 
-[ext_resource type="Script" uid="uid://pd23k6dwtqb2" path="res://Scripts/End.gd" id="1_sxy6w"]
+[ext_resource type="Script" uid="uid://b7mw7bssy0w8o" path="res://Scripts/Game.gd" id="1_sxy6w"]
 [ext_resource type="TileSet" uid="uid://b60c72cv08et2" path="res://visual_assets/tile_set_wall_floor.tres" id="2_d2hsu"]
 [ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-visual.tscn" id="3_sxy6w"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="4_qok1m"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://drv7dvkrfp7li" path="res://Scenes/win_zone.tscn" id="11_sxy6w"]
 [ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="12_qok1m"]
 
-[node name="Level6" type="Control" unique_id=260818078]
+[node name="Level6" type="Control" unique_id=260818078 node_paths=PackedStringArray("player1Input", "player2Input", "player1", "player2", "p1BSpawn", "p2Bspawn")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,6 +24,12 @@ offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sxy6w")
+player1Input = NodePath("P1BeatTracker")
+player2Input = NodePath("P2BeatTracker")
+player1 = NodePath("player1")
+player2 = NodePath("player2")
+p1BSpawn = NodePath("P1BeatSpawn")
+p2Bspawn = NodePath("P2BeatSpawn")
 
 [node name="MapLayers" type="Node2D" parent="." unique_id=1861791998]
 position = Vector2(-3, 0)
@@ -233,11 +239,10 @@ position = Vector2(933, -800)
 position = Vector2(3, -1018)
 next_level = -1
 
-[node name="End" parent="." unique_id=1482473209 node_paths=PackedStringArray("winZone") instance=ExtResource("12_qok1m")]
+[node name="End" parent="." unique_id=1482473209 instance=ExtResource("12_qok1m")]
 visible = false
 z_index = 10
 layout_mode = 1
-winZone = NodePath("")
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]
