@@ -48,7 +48,8 @@ func _input(event):
 	if event.is_action("escape"):
 		if get_tree().change_scene_to_file("res://Scenes/Menu.tscn") != OK:
 			print ("Error changing scene to Menu")
-
+	if event.is_action("reloadLevel"):
+		get_tree().reload_current_scene()
 
 func _on_Conductor_measure(position):
 	if position == 1:
