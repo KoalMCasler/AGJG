@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="AGJCoopGame"
-run/main_scene="uid://dwfd7yjpcv7wm"
+run/main_scene="uid://bum3mmte5te12"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dwr3pbt8n6ctd"
 
 [display]
 

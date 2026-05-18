@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7mw7bssy0w8o" path="res://Scripts/Game.gd" id="1_ejprb"]
 [ext_resource type="TileSet" uid="uid://b60c72cv08et2" path="res://visual_assets/tile_set_wall_floor.tres" id="2_ehjmi"]
+[ext_resource type="PackedScene" uid="uid://drv7dvkrfp7li" path="res://Scenes/win_zone.tscn" id="3_ejprb"]
 [ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-visual.tscn" id="6_2jwna"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="7_sgc6j"]
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_p4u3k"]
@@ -50,14 +51,18 @@ tile_map_data = PackedByteArray("AAD7/wEABAAAAAEAAAD+/wAABAAAAAEAAAABAP//BAABAAI
 tile_set = ExtResource("2_ehjmi")
 collision_enabled = false
 
+[node name="winZone" parent="MapLayers" unique_id=914968524 instance=ExtResource("3_ejprb")]
+position = Vector2(-5, 2)
+next_level = 3
+
 [node name="player1" parent="." unique_id=1039279320 node_paths=PackedStringArray("game") instance=ExtResource("6_2jwna")]
-position = Vector2(-2243, -1584)
+position = Vector2(-2243, -1817)
 game = NodePath("..")
 playerNum = 1
 
 [node name="player2" parent="." unique_id=1118396811 node_paths=PackedStringArray("game") instance=ExtResource("6_2jwna")]
 y_sort_enabled = true
-position = Vector2(2109, 720)
+position = Vector2(2109, 961)
 game = NodePath("..")
 playerNum = 2
 

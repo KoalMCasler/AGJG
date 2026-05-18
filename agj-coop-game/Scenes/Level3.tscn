@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7mw7bssy0w8o" path="res://Scripts/Game.gd" id="1_m7vvj"]
 [ext_resource type="TileSet" uid="uid://b60c72cv08et2" path="res://visual_assets/tile_set_wall_floor.tres" id="2_m7vvj"]
+[ext_resource type="PackedScene" uid="uid://drv7dvkrfp7li" path="res://Scenes/win_zone.tscn" id="3_m7vvj"]
 [ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-visual.tscn" id="6_t5kwq"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="7_ms3ee"]
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="8_ktnig"]
@@ -49,6 +50,10 @@ tile_set = ExtResource("2_m7vvj")
 tile_map_data = PackedByteArray("AAD3/wMABAAAAAAAAAAHAAAABAAAAAAAAAAIAPz/BAAAAAIAAAD5/wIABAAAAAIAAAD3////BAAAAAEAAAABAP3/BAAAAAEAAAAIAAAABAABAAEAAAD+/wIABAABAAEAAAA=")
 tile_set = ExtResource("2_m7vvj")
 collision_enabled = false
+
+[node name="winZone" parent="MapLayers" unique_id=914968524 instance=ExtResource("3_m7vvj")]
+position = Vector2(0, -2)
+next_level = 4
 
 [node name="player1" parent="." unique_id=1039279320 node_paths=PackedStringArray("game") instance=ExtResource("6_t5kwq")]
 position = Vector2(-2243, -1328)

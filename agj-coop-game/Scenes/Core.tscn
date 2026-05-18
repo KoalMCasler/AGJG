@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bum3mmte5te12"]
+
+[ext_resource type="PackedScene" uid="uid://dwfd7yjpcv7wm" path="res://Scenes/Menu.tscn" id="1_dnjoc"]
+[ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="2_8l5b3"]
+
+[node name="Core" type="Control" unique_id=346704975]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" parent="." unique_id=1511037264 instance=ExtResource("1_dnjoc")]
+layout_mode = 1
+
+[node name="End" parent="." unique_id=1482473209 instance=ExtResource("2_8l5b3")]
+visible = false
+layout_mode = 1

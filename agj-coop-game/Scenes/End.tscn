@@ -39,6 +39,7 @@ offset_right = 315.0
 offset_bottom = 351.0
 
 [node name="Grade" type="HBoxContainer" parent="Score_Panel/Layout" unique_id=1484680738]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -57,6 +58,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Score" type="HBoxContainer" parent="Score_Panel/Layout" unique_id=1001718042]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -74,6 +76,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Combo" type="HBoxContainer" parent="Score_Panel/Layout" unique_id=1506407636]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -91,6 +94,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Great" type="HBoxContainer" parent="Score_Panel/Layout" unique_id=1885837938]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -108,6 +112,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Good" type="HBoxContainer" parent="Score_Panel/Layout" unique_id=1650064274]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -125,6 +130,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Okay" type="HBoxContainer" parent="Score_Panel/Layout" unique_id=210582265]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -142,6 +148,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Missed" type="HBoxContainer" parent="Score_Panel/Layout" unique_id=1033249070]
+visible = false
 layout_mode = 2
 alignment = 1
 
