@@ -113,7 +113,12 @@ horizontal_alignment = 1
 [node name="Start_Button" type="Button" parent="Main_Panel/Main_Controls" unique_id=1605724399]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
-text = "Play"
+text = "PLAY"
+
+[node name="Quit_Button" type="Button" parent="Main_Panel/Main_Controls" unique_id=2115978007]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+text = "QUIT"
 
 [node name="Controls_Label" type="Label" parent="Main_Panel/Main_Controls" unique_id=1485503590]
 layout_mode = 2
@@ -126,3 +131,4 @@ vertical_alignment = 1
 [connection signal="value_changed" from="Audio_Panel/Audio_Controls/Volume" to="." method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="Audio_Panel/Audio_Controls/Sound_Test_Button" to="." method="_on_TextureButton_pressed"]
 [connection signal="button_down" from="Main_Panel/Main_Controls/Start_Button" to="." method="_on_Start_Button_button_down"]
+[connection signal="button_down" from="Main_Panel/Main_Controls/Quit_Button" to="." method="_on_quit_button_button_down"]

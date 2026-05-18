@@ -4,7 +4,7 @@ class_name PlayerController
 @export var game:GameManager
 ## Movemtent variables
 const tileSize: Vector2 = Vector2(256,256)
-var spriteNodePosTween: Tween
+var spritePosTween: Tween
 
 ## Player skin variables
 @export var skinOptions : Array[Texture2D]
@@ -80,10 +80,22 @@ func moveUp():
 	animateMovement(Vector2.UP)
 	if !$RayCast2DUp.is_colliding():
 		global_position += Vector2.UP * tileSize
+		$Body.global_position -= Vector2.UP * tileSize
+		if spritePosTween:
+			spritePosTween.kill()
+		spritePosTween = create_tween()
+		spritePosTween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+		spritePosTween.tween_property($Body,"global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
 	elif $RayCast2DUp.is_colliding() && $RayCast2DUp.get_collider().name.contains("statue"):
 		var statue : Statue = $RayCast2DUp.get_collider()
 		if statue.upClear:
 			global_position += Vector2.UP * tileSize
+			$Body.global_position -= Vector2.UP * tileSize
+			if spritePosTween:
+				spritePosTween.kill()
+			spritePosTween = create_tween()
+			spritePosTween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+			spritePosTween.tween_property($Body,"global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
 			$RayCast2DUp.get_collider().moveDirection(1)
 	
 	
@@ -92,10 +104,22 @@ func moveDown():
 	animateMovement(Vector2.DOWN)
 	if !$RayCast2DDown.is_colliding():
 		global_position += Vector2.DOWN * tileSize
+		$Body.global_position -= Vector2.DOWN * tileSize
+		if spritePosTween:
+			spritePosTween.kill()
+		spritePosTween = create_tween()
+		spritePosTween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+		spritePosTween.tween_property($Body,"global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
 	elif $RayCast2DDown.is_colliding() && $RayCast2DDown.get_collider().name.contains("statue"):
 		var statue : Statue = $RayCast2DDown.get_collider()
 		if statue.downClear:
 			global_position += Vector2.DOWN * tileSize
+			$Body.global_position -= Vector2.DOWN * tileSize
+			if spritePosTween:
+				spritePosTween.kill()
+			spritePosTween = create_tween()
+			spritePosTween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+			spritePosTween.tween_property($Body,"global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
 			$RayCast2DDown.get_collider().moveDirection(2)
 
 func moveLeft():
@@ -103,10 +127,22 @@ func moveLeft():
 	animateMovement(Vector2.LEFT)
 	if !$RayCast2DLeft.is_colliding():
 		global_position += Vector2.LEFT * tileSize
+		$Body.global_position -= Vector2.LEFT * tileSize
+		if spritePosTween:
+			spritePosTween.kill()
+		spritePosTween = create_tween()
+		spritePosTween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+		spritePosTween.tween_property($Body,"global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
 	elif $RayCast2DLeft.is_colliding() && $RayCast2DLeft.get_collider().name.contains("statue"):
 		var statue : Statue = $RayCast2DLeft.get_collider()
 		if statue.leftClear:
 			global_position += Vector2.LEFT * tileSize
+			$Body.global_position -= Vector2.LEFT * tileSize
+			if spritePosTween:
+				spritePosTween.kill()
+			spritePosTween = create_tween()
+			spritePosTween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+			spritePosTween.tween_property($Body,"global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
 			$RayCast2DLeft.get_collider().moveDirection(3)
 
 func moveRight():
@@ -114,8 +150,20 @@ func moveRight():
 	animateMovement(Vector2.RIGHT)
 	if !$RayCast2DRight.is_colliding():
 		global_position += Vector2.RIGHT * tileSize
+		$Body.global_position -= Vector2.RIGHT * tileSize
+		if spritePosTween:
+			spritePosTween.kill()
+		spritePosTween = create_tween()
+		spritePosTween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+		spritePosTween.tween_property($Body,"global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
 	elif $RayCast2DRight.is_colliding() && $RayCast2DRight.get_collider().name.contains("statue"):
 		var statue : Statue = $RayCast2DRight.get_collider()
 		if statue.rightClear:
 			global_position += Vector2.RIGHT * tileSize
+			$Body.global_position -= Vector2.RIGHT * tileSize
+			if spritePosTween:
+				spritePosTween.kill()
+			spritePosTween = create_tween()
+			spritePosTween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+			spritePosTween.tween_property($Body,"global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
 			$RayCast2DRight.get_collider().moveDirection(4)

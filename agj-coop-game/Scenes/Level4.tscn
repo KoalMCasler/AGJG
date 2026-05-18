@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://drv7dvkrfp7li" path="res://Scenes/win_zone.tscn" id="3_nv5kp"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="4_edi5u"]
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="5_ra572"]
-[ext_resource type="PackedScene" uid="uid://duy7n66pbocpl" path="res://Scenes/ArrowButton.tscn" id="6_2brj3"]
+[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="6_2brj3"]
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_4upjg"]
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_nqeob"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="10_jorw0"]
@@ -66,7 +66,7 @@ game = NodePath("..")
 playerNum = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1663927216]
-position = Vector2(0, -110)
+position = Vector2(-3, 112)
 zoom = Vector2(0.33, 0.33)
 editor_draw_limits = true
 

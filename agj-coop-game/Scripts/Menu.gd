@@ -16,5 +16,10 @@ func _on_HSlider_value_changed(value):
 								linear_to_db(value))
 
 
+
 func _on_TextureButton_pressed():
 	$Audio_Panel/Audio_Controls/Sound_Test_Button/AudioStreamPlayer.play()
+
+
+func _on_quit_button_button_down() -> void:
+	get_tree().quit()
