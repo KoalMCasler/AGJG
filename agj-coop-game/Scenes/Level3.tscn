@@ -51,10 +51,6 @@ tile_map_data = PackedByteArray("AAD3/wMABAAAAAAAAAAHAAAABAAAAAAAAAAIAPz/BAAAAAI
 tile_set = ExtResource("2_m7vvj")
 collision_enabled = false
 
-[node name="winZone" parent="MapLayers" unique_id=914968524 instance=ExtResource("3_m7vvj")]
-position = Vector2(0, -2)
-next_level = 4
-
 [node name="player1" parent="." unique_id=1039279320 node_paths=PackedStringArray("game") instance=ExtResource("6_t5kwq")]
 position = Vector2(-2243, -1328)
 game = NodePath("..")
@@ -172,6 +168,10 @@ visible = false
 position = Vector2(389, -640)
 color = Color(0.79607844, 0.38039216, 0.10980392, 0.88235295)
 filterOver = NodePath("../gate3")
+
+[node name="winZone" parent="." unique_id=914968524 instance=ExtResource("3_m7vvj")]
+position = Vector2(-3, -2)
+next_level = 4
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]

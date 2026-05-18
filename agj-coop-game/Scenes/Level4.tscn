@@ -51,10 +51,6 @@ tile_map_data = PackedByteArray("AAAIAPv/BAAAAAAAAAABAAAABAAAAAAAAAD5//v/BAAAAAI
 tile_set = ExtResource("2_qxjbv")
 collision_enabled = false
 
-[node name="winZone" parent="MapLayers" unique_id=914968524 instance=ExtResource("3_nv5kp")]
-position = Vector2(-2, -4)
-next_level = 5
-
 [node name="player1" parent="." unique_id=1039279320 node_paths=PackedStringArray("game") instance=ExtResource("3_iv3jq")]
 position = Vector2(-2243, 976)
 game = NodePath("..")
@@ -66,7 +62,7 @@ game = NodePath("..")
 playerNum = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1663927216]
-position = Vector2(0, -110)
+position = Vector2(-3, 112)
 zoom = Vector2(0.33, 0.33)
 editor_draw_limits = true
 
@@ -217,6 +213,10 @@ position = Vector2(-1667, -1152)
 [node name="gate6" parent="." unique_id=1538953282 instance=ExtResource("10_jorw0")]
 z_index = 2
 position = Vector2(1661, -1152)
+
+[node name="winZone" parent="." unique_id=914968524 instance=ExtResource("3_nv5kp")]
+position = Vector2(-5, -4)
+next_level = 5
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]
