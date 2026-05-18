@@ -51,8 +51,8 @@ tile_map_data = PackedByteArray("AAD7/wEABAAAAAEAAAD+/wAABAAAAAEAAAABAP//BAABAAI
 tile_set = ExtResource("2_ehjmi")
 collision_enabled = false
 
-[node name="winZone" parent="MapLayers" unique_id=914968524 instance=ExtResource("3_ejprb")]
-position = Vector2(-5, 2)
+[node name="winZone" parent="." unique_id=914968524 instance=ExtResource("3_ejprb")]
+position = Vector2(-8, 2)
 next_level = 3
 
 [node name="player1" parent="." unique_id=1039279320 node_paths=PackedStringArray("game") instance=ExtResource("6_2jwna")]
