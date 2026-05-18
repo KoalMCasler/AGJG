@@ -9,6 +9,7 @@ var rightClear : bool
 var spritePosTween : Tween
 
 const tileSize: Vector2 = Vector2(256,256)
+@onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _process(delta: float):
 	if $RayCast2DUp.is_colliding():
@@ -29,6 +30,7 @@ func _process(delta: float):
 		rightClear = true
 
 func moveDirection(dir:int):
+	audio.play()
 	if dir == 1 && upClear:
 		global_position += Vector2.UP * tileSize
 		$sprite.global_position -= Vector2.UP * tileSize
@@ -61,3 +63,4 @@ func moveDirection(dir:int):
 		spritePosTween = create_tween()
 		spritePosTween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 		spritePosTween.tween_property($sprite,"global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
+	

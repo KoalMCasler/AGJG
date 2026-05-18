@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bvfnkt73y4cuw" path="res://visual_assets/gdj-discobolus-256px-lit.png" id="1_3x845"]
 [ext_resource type="Script" uid="uid://beupcswaenijg" path="res://Scripts/statue.gd" id="1_f324d"]
+[ext_resource type="AudioStream" uid="uid://bof0syyxf30mj" path="res://Sounds/stone-slide-sound-effects.ogg" id="3_np2qh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3x845"]
 size = Vector2(224, 224)
@@ -44,3 +45,6 @@ position = Vector2(128, 112)
 target_position = Vector2(144, 0)
 collision_mask = 3
 hit_from_inside = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=204533233]
+stream = ExtResource("3_np2qh")
