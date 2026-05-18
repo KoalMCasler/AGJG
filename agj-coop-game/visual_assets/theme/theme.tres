@@ -6,9 +6,15 @@
 [ext_resource type="StyleBox" uid="uid://b72ov5eypanop" path="res://visual_assets/theme/button_normal.tres" id="4_mamj3"]
 [ext_resource type="FontFile" uid="uid://bfui2ec2pbd03" path="res://Fonts/BrunoAceSC-Regular.ttf" id="5_hewam"]
 [ext_resource type="StyleBox" uid="uid://buoori4skiq4a" path="res://visual_assets/theme/style_box_gradient.tres" id="5_icjwc"]
+[ext_resource type="Texture2D" uid="uid://br6aub4cextsd" path="res://visual_assets/purple_arrow_50x50.png" id="6_qg15a"]
+[ext_resource type="Texture2D" uid="uid://drenv4lxia1sq" path="res://visual_assets/blue_arrow_50x50.png" id="7_n8l0t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtvm2"]
+bg_color = Color(2.7915835e-06, 0.6625208, 0.8319123, 1)
 
 [resource]
 BoxContainer/constants/separation = 12
+BoxContainer/styles/sliderBG = null
 Button/colors/font_color = Color(0.902267, 0.7284478, 0.9172005, 1)
 Button/colors/font_disabled_color = Color(0.5563201, 0.0732, 0.61, 1)
 Button/colors/font_focus_color = Color(1, 1, 1, 1)
@@ -32,6 +38,9 @@ Label/constants/outline_size = 1
 Label/font_sizes/font_size = 24
 Label/fonts/font = ExtResource("1_d0mwm")
 Panel/styles/panel = ExtResource("5_icjwc")
+Slider/icons/grabber = ExtResource("6_qg15a")
+Slider/icons/grabber_highlight = ExtResource("7_n8l0t")
+Slider/styles/grabber_area = SubResource("StyleBoxFlat_dtvm2")
 Title/base_type = &"Label"
 Title/colors/font_color = Color(0.827451, 0.54509807, 0.85490197, 1)
 Title/colors/font_outline_color = Color(0.827451, 0.54509807, 0.85490197, 1)
