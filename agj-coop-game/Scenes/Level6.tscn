@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-visual.tscn" id="3_sxy6w"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="4_qok1m"]
 [ext_resource type="AudioStream" uid="uid://den1u2xlvq754" path="res://Sounds/escaping_anxiety.mp3" id="5_sxy6w"]
-[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="6_2fq2u"]
+[ext_resource type="PackedScene" uid="uid://duy7n66pbocpl" path="res://Scenes/ArrowButton.tscn" id="6_2fq2u"]
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_fdpi5"]
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_q8p40"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="10_o2gfh"]
@@ -217,27 +217,14 @@ position = Vector2(-644, 777)
 [node name="statue2" parent="." unique_id=1832956220 instance=ExtResource("11_d2hsu")]
 position = Vector2(637, 528)
 
-[node name="statue3" parent="." unique_id=497247407 instance=ExtResource("11_d2hsu")]
-visible = false
-position = Vector2(-1467, 1184)
-
-[node name="statue4" parent="." unique_id=1852625304 instance=ExtResource("11_d2hsu")]
-visible = false
-position = Vector2(-2251, 712)
-
-[node name="statue5" parent="." unique_id=251757368 instance=ExtResource("11_d2hsu")]
-visible = false
-position = Vector2(933, -800)
-
 [node name="winZone" parent="." unique_id=914968524 instance=ExtResource("11_sxy6w")]
 position = Vector2(3, -1018)
 next_level = -1
 
-[node name="End" parent="." unique_id=1482473209 node_paths=PackedStringArray("winZone") instance=ExtResource("12_qok1m")]
+[node name="End" parent="." unique_id=1482473209 instance=ExtResource("12_qok1m")]
 visible = false
 z_index = 10
 layout_mode = 1
-winZone = NodePath("")
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]
