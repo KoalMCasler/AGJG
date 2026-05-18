@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cio1r6c6xokdh" path="res://visual_assets/button_2_256.png" id="5_rmklx"]
 [ext_resource type="Texture2D" uid="uid://r7desypcr6p6" path="res://visual_assets/button_4_256.png" id="6_q5xx2"]
 [ext_resource type="Texture2D" uid="uid://bcvav65aahtfs" path="res://visual_assets/button_6_256.png" id="7_oxl26"]
+[ext_resource type="AudioStream" uid="uid://oingdq252ipl" path="res://Sounds/UI_Synth_03.wav" id="8_c4mwi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kpiu"]
 size = Vector2(224, 224)
@@ -25,5 +26,9 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1812204480]
 shape = SubResource("RectangleShape2D_0kpiu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=335596174]
+stream = ExtResource("8_c4mwi")
+mix_target = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

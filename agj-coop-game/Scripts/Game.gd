@@ -33,6 +33,8 @@ var note = load("res://Scenes/Note.tscn")
 var instance1
 var instance2
 
+@onready var endScreen = $End
+
 @export var p1BSpawn:Node2D
 @export var p2Bspawn:Node2D
 
