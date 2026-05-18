@@ -29,3 +29,4 @@ func _process(delta: float):
 
 func _on_area_2d_body_entered(body: Node2D):
 	isActivated = true
+	$AudioStreamPlayer.play()

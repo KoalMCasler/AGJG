@@ -1,10 +1,11 @@
 [gd_scene format=4 uid="uid://dhp8bm28c04cy"]
 
-[ext_resource type="PackedScene" uid="uid://duy7n66pbocpl" path="res://Scenes/ArrowButton.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="1"]
 [ext_resource type="TileSet" uid="uid://b60c72cv08et2" path="res://visual_assets/tile_set_wall_floor.tres" id="4_71axn"]
 [ext_resource type="Script" uid="uid://b7mw7bssy0w8o" path="res://Scripts/Game.gd" id="6"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="8"]
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="9_71axn"]
+[ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="10_3so38"]
 [ext_resource type="PackedScene" uid="uid://ccgdbo6wdth8f" path="res://visual_assets/statue.tscn" id="10_71axn"]
 [ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-visual.tscn" id="10_dahhg"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="12_3cx6b"]
@@ -27,6 +28,11 @@ player1 = NodePath("player1")
 player2 = NodePath("player2")
 p1BSpawn = NodePath("P1BeatSpawn")
 p2Bspawn = NodePath("P2BeatSpawn")
+
+[node name="End" parent="." unique_id=1482473209 instance=ExtResource("10_3so38")]
+visible = false
+z_index = 10
+layout_mode = 1
 
 [node name="Conductor" parent="." unique_id=923597594 instance=ExtResource("8")]
 stream = ExtResource("9_71axn")

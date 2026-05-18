@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://drv7dvkrfp7li" path="res://Scenes/win_zone.tscn" id="3_nv5kp"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="4_edi5u"]
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="5_ra572"]
-[ext_resource type="PackedScene" uid="uid://duy7n66pbocpl" path="res://Scenes/ArrowButton.tscn" id="6_2brj3"]
+[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="6_2brj3"]
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_4upjg"]
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_nqeob"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="10_jorw0"]
+[ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="11_qxjbv"]
 
 [node name="Level4" type="Control" unique_id=260818078 node_paths=PackedStringArray("player1Input", "player2Input", "player1", "player2", "p1BSpawn", "p2Bspawn")]
 layout_mode = 3
@@ -28,6 +29,12 @@ player1 = NodePath("player1")
 player2 = NodePath("player2")
 p1BSpawn = NodePath("P1BeatSpawn")
 p2Bspawn = NodePath("P2BeatSpawn")
+
+[node name="End" parent="." unique_id=1482473209 node_paths=PackedStringArray("winZone") instance=ExtResource("11_qxjbv")]
+visible = false
+z_index = 10
+layout_mode = 1
+winZone = NodePath("../winZone")
 
 [node name="MapLayers" type="Node2D" parent="." unique_id=1861791998]
 position = Vector2(-3, 0)
