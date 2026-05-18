@@ -4,9 +4,9 @@
 [ext_resource type="TileSet" uid="uid://b60c72cv08et2" path="res://visual_assets/tile_set_wall_floor.tres" id="2_ehjmi"]
 [ext_resource type="PackedScene" uid="uid://drv7dvkrfp7li" path="res://Scenes/win_zone.tscn" id="3_ejprb"]
 [ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-visual.tscn" id="6_2jwna"]
+[ext_resource type="AudioStream" uid="uid://7ow04dngflo3" path="res://Sounds/checkpoint.mp3" id="6_au75x"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="7_sgc6j"]
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_p4u3k"]
-[ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="8_xx40l"]
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_ejprb"]
 [ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="9_utdxf"]
 [ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="11_au75x"]
@@ -75,7 +75,7 @@ zoom = Vector2(0.26, 0.26)
 editor_draw_limits = true
 
 [node name="Conductor" parent="." unique_id=923597594 instance=ExtResource("7_sgc6j")]
-stream = ExtResource("8_xx40l")
+stream = ExtResource("6_au75x")
 volume_db = -15.0
 bpm = 120
 

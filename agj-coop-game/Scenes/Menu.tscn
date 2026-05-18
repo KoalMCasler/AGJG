@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0ywisw555dhp" path="res://Scripts/Menu.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bqtb2172jgp06" path="res://visual_assets/theme/glitch-map-100.png" id="2_idohh"]
-[ext_resource type="AudioStream" uid="uid://cn8nl0wik2cnp" path="res://Sounds/adventure_time_revision.mp3" id="2_wfhf6"]
+[ext_resource type="AudioStream" uid="uid://cqi87qlb4ey04" path="res://Sounds/jazz_synth_dec_17.mp3" id="2_wfhf6"]
 [ext_resource type="Theme" uid="uid://ddgxalkafhoyf" path="res://visual_assets/theme/theme.tres" id="6_idohh"]
 [ext_resource type="Texture2D" uid="uid://b72tpttnryd8i" path="res://Sprites/ui/slider_arrow2.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://xmnwac5b3whk" path="res://Sprites/ui/slider_arrow1.png" id="8"]
