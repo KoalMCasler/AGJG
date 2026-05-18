@@ -33,7 +33,7 @@ func _unhandled_input(event):
 						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
-				frame = 1
+				frame = 3
 			elif event.is_action_released(input):
 				$PushTimer.start()
 		if event.is_action("P1down"):
@@ -51,7 +51,7 @@ func _unhandled_input(event):
 						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
-				frame = 1
+				frame = 3
 			elif event.is_action_released(input):
 				$PushTimer.start()
 		if event.is_action("P1left"):
@@ -69,7 +69,7 @@ func _unhandled_input(event):
 						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
-				frame = 1
+				frame = 3
 			elif event.is_action_released(input):
 				$PushTimer.start()
 		if event.is_action("P1right"):
@@ -87,7 +87,7 @@ func _unhandled_input(event):
 						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
-				frame = 1
+				frame = 3
 			elif event.is_action_released(input):
 				$PushTimer.start()
 	if playerNum == 2:
@@ -106,7 +106,7 @@ func _unhandled_input(event):
 						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
-				frame = 1
+				frame = 3
 			elif event.is_action_released(input):
 				$PushTimer.start()
 		if event.is_action("P2up"):
@@ -124,7 +124,7 @@ func _unhandled_input(event):
 						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
-				frame = 1
+				frame = 3
 			elif event.is_action_released(input):
 				$PushTimer.start()
 		if event.is_action("P2left"):
@@ -142,7 +142,7 @@ func _unhandled_input(event):
 						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
-				frame = 1
+				frame = 3
 			elif event.is_action_released(input):
 				$PushTimer.start()
 		if event.is_action("P2right"):
@@ -160,7 +160,7 @@ func _unhandled_input(event):
 						current_note.destroy(2)
 					_reset()
 			if event.is_action_pressed(input):
-				frame = 1
+				frame = 3
 			elif event.is_action_released(input):
 				$PushTimer.start()
 		
@@ -199,7 +199,7 @@ func _on_OkayArea_area_exited(area):
 
 
 func _on_PushTimer_timeout():
-	frame = 0
+	frame = 2
 
 
 func _reset():

@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://s8ioqf6vnbw6"]
+
+[ext_resource type="Texture2D" uid="uid://odwt46ah3rch" path="res://visual_assets/arrows-glow.png" id="1_fnm51"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kiaj0"]
+atlas = ExtResource("1_fnm51")
+region = Rect2(25, 0, 190, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaqbq"]
+atlas = ExtResource("1_fnm51")
+region = Rect2(215, 0, 190, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l62a1"]
+atlas = ExtResource("1_fnm51")
+region = Rect2(405, 0, 190, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hw1t2"]
+atlas = ExtResource("1_fnm51")
+region = Rect2(595, 0, 190, 200)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kiaj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uaqbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l62a1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hw1t2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
