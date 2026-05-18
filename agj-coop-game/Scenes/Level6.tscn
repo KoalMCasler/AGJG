@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-visual.tscn" id="3_sxy6w"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="4_qok1m"]
 [ext_resource type="AudioStream" uid="uid://den1u2xlvq754" path="res://Sounds/escaping_anxiety.mp3" id="5_sxy6w"]
-[ext_resource type="PackedScene" uid="uid://duy7n66pbocpl" path="res://Scenes/ArrowButton.tscn" id="6_2fq2u"]
+[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="6_2fq2u"]
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_fdpi5"]
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_q8p40"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="10_o2gfh"]
@@ -28,6 +28,7 @@ player1Input = NodePath("P1BeatTracker")
 player2Input = NodePath("P2BeatTracker")
 player1 = NodePath("player1")
 player2 = NodePath("player2")
+beatOffsetVal = 5.75
 p1BSpawn = NodePath("P1BeatSpawn")
 p2Bspawn = NodePath("P2BeatSpawn")
 

@@ -56,6 +56,8 @@ func animateMovement(direction: Vector2):
 		polygons_forward.visible = false
 		polygons_backward.visible = true
 	animator.animation_set_next("player/move", "player/bop")
+	if animator.is_playing():
+		animator.stop()
 	animator.play("player/move")
 	
 func animatePush():

@@ -33,6 +33,8 @@ var note = load("res://Scenes/Note.tscn")
 var instance1
 var instance2
 
+@export var beatOffsetVal : float
+
 @onready var endScreen = $End
 
 @export var p1BSpawn:Node2D
@@ -41,7 +43,7 @@ var instance2
 
 func _ready():
 	randomize()
-	$Conductor.play_with_beat_offset(6)
+	$Conductor.play_with_beat_offset(beatOffsetVal)
 
 
 func _input(event):

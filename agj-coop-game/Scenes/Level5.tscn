@@ -25,10 +25,12 @@ player1Input = NodePath("P1BeatTracker")
 player2Input = NodePath("P2BeatTracker")
 player1 = NodePath("player1")
 player2 = NodePath("player2")
+beatOffsetVal = 5.0
 p1BSpawn = NodePath("P1BeatSpawn")
 p2Bspawn = NodePath("P2BeatSpawn")
 
 [node name="End" parent="." unique_id=1482473209 node_paths=PackedStringArray("winZone") instance=ExtResource("9_4kscp")]
+visible = false
 z_index = 10
 layout_mode = 1
 winZone = NodePath("../winZone")

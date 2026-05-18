@@ -27,6 +27,7 @@ player1Input = NodePath("P1BeatTracker")
 player2Input = NodePath("P2BeatTracker")
 player1 = NodePath("player1")
 player2 = NodePath("player2")
+beatOffsetVal = 6.0
 p1BSpawn = NodePath("P1BeatSpawn")
 p2Bspawn = NodePath("P2BeatSpawn")
 
