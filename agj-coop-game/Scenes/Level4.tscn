@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://drv7dvkrfp7li" path="res://Scenes/win_zone.tscn" id="3_nv5kp"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="4_edi5u"]
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="5_ra572"]
-[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="6_2brj3"]
+[ext_resource type="PackedScene" uid="uid://duy7n66pbocpl" path="res://Scenes/ArrowButton.tscn" id="6_2brj3"]
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_4upjg"]
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_nqeob"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="10_jorw0"]
@@ -50,10 +50,6 @@ tile_set = ExtResource("2_qxjbv")
 tile_map_data = PackedByteArray("AAAIAPv/BAAAAAAAAAABAAAABAAAAAAAAAD5//v/BAAAAAIAAAD+/wAABAABAAAAAAD6//7/BAAAAAEAAAADAP7/BAAAAAEAAAADAAIABAABAAEAAAD8/wIABAABAAEAAAAFAP7/BAAAAAIAAAD8//7/BAABAAIAAAAGAPv/BAABAAIAAAA=")
 tile_set = ExtResource("2_qxjbv")
 collision_enabled = false
-
-[node name="winZone" parent="MapLayers" unique_id=914968524 instance=ExtResource("3_nv5kp")]
-position = Vector2(-2, -4)
-next_level = 5
 
 [node name="player1" parent="." unique_id=1039279320 node_paths=PackedStringArray("game") instance=ExtResource("3_iv3jq")]
 position = Vector2(-2243, 976)
@@ -217,6 +213,10 @@ position = Vector2(-1667, -1152)
 [node name="gate6" parent="." unique_id=1538953282 instance=ExtResource("10_jorw0")]
 z_index = 2
 position = Vector2(1661, -1152)
+
+[node name="winZone" parent="." unique_id=914968524 instance=ExtResource("3_nv5kp")]
+position = Vector2(-5, -4)
+next_level = 5
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]

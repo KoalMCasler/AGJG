@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_p4u3k"]
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="8_xx40l"]
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_ejprb"]
-[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="9_utdxf"]
+[ext_resource type="PackedScene" uid="uid://duy7n66pbocpl" path="res://Scenes/ArrowButton.tscn" id="9_utdxf"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="12_62f1r"]
 
 [node name="Level2" type="Control" unique_id=260818078 node_paths=PackedStringArray("player1Input", "player2Input", "player1", "player2", "p1BSpawn", "p2Bspawn")]
@@ -50,10 +50,6 @@ tile_set = ExtResource("2_ehjmi")
 tile_map_data = PackedByteArray("AAD7/wEABAAAAAEAAAD+/wAABAAAAAEAAAABAP//BAABAAIAAAAEAP7/BAABAAIAAAA=")
 tile_set = ExtResource("2_ehjmi")
 collision_enabled = false
-
-[node name="winZone" parent="MapLayers" unique_id=914968524 instance=ExtResource("3_ejprb")]
-position = Vector2(-5, 2)
-next_level = 3
 
 [node name="player1" parent="." unique_id=1039279320 node_paths=PackedStringArray("game") instance=ExtResource("6_2jwna")]
 position = Vector2(-2243, -1817)
@@ -133,6 +129,10 @@ position = Vector2(381, -128)
 visible = false
 position = Vector2(-1227, 728)
 filterOver = NodePath("../gate2")
+
+[node name="winZone" parent="." unique_id=914968524 instance=ExtResource("3_ejprb")]
+position = Vector2(-8, 2)
+next_level = 3
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]
