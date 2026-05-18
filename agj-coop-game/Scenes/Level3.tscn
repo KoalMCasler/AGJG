@@ -51,18 +51,17 @@ tile_set = ExtResource("2_m7vvj")
 collision_enabled = false
 
 [node name="player1" parent="." unique_id=1039279320 node_paths=PackedStringArray("game") instance=ExtResource("6_t5kwq")]
-z_index = 2
 position = Vector2(-2243, -1328)
 game = NodePath("..")
 playerNum = 1
 
 [node name="player2" parent="." unique_id=1118396811 node_paths=PackedStringArray("game") instance=ExtResource("6_t5kwq")]
-z_index = 2
 position = Vector2(2109, 464)
 game = NodePath("..")
 playerNum = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1663927216]
+position = Vector2(0, -110)
 zoom = Vector2(0.33, 0.33)
 editor_draw_limits = true
 
@@ -72,22 +71,20 @@ volume_db = -15.0
 bpm = 120
 
 [node name="P1BeatSpawn" type="Node2D" parent="." unique_id=1049024763]
-position = Vector2(-2600, -1840)
-scale = Vector2(5, 5)
+position = Vector2(-2600, -1536)
 
 [node name="P2BeatSpawn" type="Node2D" parent="." unique_id=1246772108]
-position = Vector2(2600, -1840)
-scale = Vector2(5, 5)
+position = Vector2(2600, -1536)
 
 [node name="P1BeatTracker" parent="." unique_id=44705561 instance=ExtResource("9_nfsas")]
 z_index = 11
-position = Vector2(-2600, 560)
+position = Vector2(-2600, 0)
 scale = Vector2(5, 5)
 playerNum = 1
 
 [node name="P2BeatTracker" parent="." unique_id=1686373350 instance=ExtResource("9_nfsas")]
 z_index = 1
-position = Vector2(2600, 560)
+position = Vector2(2600, 0)
 scale = Vector2(5, 5)
 playerNum = 2
 
