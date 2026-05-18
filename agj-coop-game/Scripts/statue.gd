@@ -30,7 +30,7 @@ func _process(delta: float):
 		rightClear = true
 
 func moveDirection(dir:int):
-	audio.play()
+	audio.play()    
 	if dir == 1 && upClear:
 		global_position += Vector2.UP * tileSize
 		$sprite.global_position -= Vector2.UP * tileSize
