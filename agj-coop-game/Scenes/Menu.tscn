@@ -3,10 +3,17 @@
 [ext_resource type="Script" uid="uid://d0ywisw555dhp" path="res://Scripts/Menu.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bqtb2172jgp06" path="res://visual_assets/theme/glitch-map-100.png" id="2_idohh"]
 [ext_resource type="AudioStream" uid="uid://cqi87qlb4ey04" path="res://Sounds/jazz_synth_dec_17.mp3" id="2_wfhf6"]
-[ext_resource type="Texture2D" uid="uid://br6aub4cextsd" path="res://visual_assets/purple_arrow_50x50.png" id="5_wfhf6"]
-[ext_resource type="Texture2D" uid="uid://drenv4lxia1sq" path="res://visual_assets/blue_arrow_50x50.png" id="6_3jcrr"]
+[ext_resource type="Texture2D" uid="uid://dhpvylew6r5g4" path="res://visual_assets/beat_markers_small.png" id="5_idohh"]
 [ext_resource type="Theme" uid="uid://ddgxalkafhoyf" path="res://visual_assets/theme/theme.tres" id="6_idohh"]
 [ext_resource type="AudioStream" uid="uid://oingdq252ipl" path="res://Sounds/UI_Synth_03.wav" id="6_wfhf6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfhf6"]
+atlas = ExtResource("5_idohh")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jcrr"]
+atlas = ExtResource("5_idohh")
+region = Rect2(30, 30, 30, 30)
 
 [node name="Menu" type="Control" unique_id=1511037264]
 layout_mode = 3
@@ -61,8 +68,8 @@ grow_vertical = 2
 [node name="Volume" type="HSlider" parent="Audio_Panel/Audio_Controls" unique_id=1886478937]
 layout_mode = 2
 theme = ExtResource("6_idohh")
-theme_override_icons/grabber = ExtResource("5_wfhf6")
-theme_override_icons/grabber_highlight = ExtResource("6_3jcrr")
+theme_override_icons/grabber = SubResource("AtlasTexture_wfhf6")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_3jcrr")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -97,6 +104,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Main_Controls" type="VBoxContainer" parent="Main_Panel" unique_id=1105703848]
+z_index = 2
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -118,6 +126,7 @@ text = "VaporMaze"
 horizontal_alignment = 1
 
 [node name="Start_Button" type="Button" parent="Main_Panel/Main_Controls" unique_id=1605724399]
+z_index = 2
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
 text = "PLAY"

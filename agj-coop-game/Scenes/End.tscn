@@ -9,8 +9,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -3520.0
+offset_top = -2086.0
+offset_right = -3520.0
+offset_bottom = -2086.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(3, 3)
 script = ExtResource("6")
 
 [node name="Background_Panel" type="TextureRect" parent="." unique_id=1375795934]
@@ -18,17 +23,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -6001.0
-offset_top = -4172.0
-offset_right = 3934.0
-offset_bottom = 3928.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_70j8v")
-expand_mode = 2
-stretch_mode = 4
 
 [node name="Score_Panel" type="Panel" parent="." unique_id=1274278112]
+visible = false
 layout_mode = 0
 offset_left = -723.0
 offset_top = -726.0
@@ -48,17 +48,72 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="PlayAgain" type="Button" parent="Score_Panel/Layout" unique_id=869020784]
-custom_minimum_size = Vector2(1200, 400)
+[node name="Main_Panel" type="Panel" parent="." unique_id=132809581]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.0
+offset_top = -192.0
+offset_right = 231.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main_Controls" type="VBoxContainer" parent="Main_Panel" unique_id=1848616296]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -74.0
+offset_right = 75.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Main_Panel/Main_Controls" unique_id=637576783]
 layout_mode = 2
-theme_override_font_sizes/font_size = 269
+theme = ExtResource("6_dut67")
+theme_type_variation = &"Title"
+text = "VaporMaze"
+horizontal_alignment = 1
+
+[node name="PlayAgain" type="Button" parent="Main_Panel/Main_Controls" unique_id=869020784]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
 text = "Next Maze"
 
-[node name="BackToMenu" type="Button" parent="Score_Panel/Layout" unique_id=1864919866]
-custom_minimum_size = Vector2(1200, 400)
+[node name="BackToMenu" type="Button" parent="Main_Panel/Main_Controls" unique_id=1864919866]
+custom_minimum_size = Vector2(350, 40)
 layout_mode = 2
-theme_override_font_sizes/font_size = 269
 text = "Menu"
 
-[connection signal="pressed" from="Score_Panel/Layout/PlayAgain" to="." method="_on_PlayAgain_pressed"]
-[connection signal="pressed" from="Score_Panel/Layout/BackToMenu" to="." method="_on_BackToMenu_pressed"]
+[node name="Start_Button" type="Button" parent="Main_Panel/Main_Controls" unique_id=1775811567]
+visible = false
+z_index = 2
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+text = "PLAY"
+
+[node name="Quit_Button" type="Button" parent="Main_Panel/Main_Controls" unique_id=849304857]
+visible = false
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+text = "QUIT"
+
+[node name="Controls_Label" type="Label" parent="Main_Panel/Main_Controls" unique_id=1405842125]
+layout_mode = 2
+text = "CONTROLS
+P1: WASD
+P2: ARROW KEYS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Main_Panel/Main_Controls/PlayAgain" to="." method="_on_PlayAgain_pressed"]
+[connection signal="pressed" from="Main_Panel/Main_Controls/BackToMenu" to="." method="_on_BackToMenu_pressed"]

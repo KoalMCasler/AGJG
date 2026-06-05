@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="8_0wsr5"]
 [ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="8_6ll4n"]
 [ext_resource type="PackedScene" uid="uid://bfj4p68u35l23" path="res://Scenes/ArrowButton.tscn" id="9_jgorv"]
+[ext_resource type="SpriteFrames" uid="uid://ivoietfv7uxn" path="res://visual_assets/atlas_parts/droplet_sprite_frames.tres" id="9_kylad"]
 
 [node name="Level1" type="Control" unique_id=260818078 node_paths=PackedStringArray("player1Input", "player2Input", "player1", "player2", "p1BSpawn", "p2Bspawn")]
 layout_mode = 3
@@ -32,6 +33,10 @@ p2Bspawn = NodePath("P2BeatSpawn")
 visible = false
 z_index = 10
 layout_mode = 1
+offset_left = -4183.0
+offset_top = -2462.0
+offset_right = -4183.0
+offset_bottom = -2462.0
 winZone = NodePath("../winZone")
 
 [node name="MapLayers" type="Node2D" parent="." unique_id=1861791998]
@@ -87,12 +92,16 @@ scale = Vector2(5, 5)
 z_index = 1
 position = Vector2(-3.0000153, -1408)
 scale = Vector2(5, 5)
+sprite_frames = ExtResource("9_kylad")
+frame = 0
 playerNum = 1
 
 [node name="P2BeatTracker" parent="." unique_id=1686373350 instance=ExtResource("9_jgorv")]
 z_index = 1
 position = Vector2(-3.0000002, -1408)
 scale = Vector2(5, 5)
+sprite_frames = ExtResource("9_kylad")
+frame = 0
 playerNum = 2
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]

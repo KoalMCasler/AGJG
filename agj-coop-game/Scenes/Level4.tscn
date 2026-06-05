@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_nqeob"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="10_jorw0"]
 [ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="11_qxjbv"]
+[ext_resource type="SpriteFrames" uid="uid://ivoietfv7uxn" path="res://visual_assets/atlas_parts/droplet_sprite_frames.tres" id="12_iv3jq"]
 
 [node name="Level4" type="Control" unique_id=260818078 node_paths=PackedStringArray("player1Input", "player2Input", "player1", "player2", "p1BSpawn", "p2Bspawn")]
 layout_mode = 3
@@ -35,6 +36,10 @@ p2Bspawn = NodePath("P2BeatSpawn")
 visible = false
 z_index = 10
 layout_mode = 1
+offset_left = -4057.0
+offset_top = -2131.0
+offset_right = -4057.0
+offset_bottom = -2131.0
 winZone = NodePath("../winZone")
 
 [node name="MapLayers" type="Node2D" parent="." unique_id=1861791998]
@@ -220,12 +225,16 @@ scale = Vector2(5, 5)
 z_index = 1
 position = Vector2(-3.0000153, -1408)
 scale = Vector2(5, 5)
+sprite_frames = ExtResource("12_iv3jq")
+frame = 0
 playerNum = 1
 
 [node name="P2BeatTracker" parent="." unique_id=1345726702 instance=ExtResource("6_2brj3")]
 z_index = 1
 position = Vector2(-3.0000002, -1408)
 scale = Vector2(5, 5)
+sprite_frames = ExtResource("12_iv3jq")
+frame = 0
 playerNum = 2
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
