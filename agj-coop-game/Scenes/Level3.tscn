@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="7_ms3ee"]
 [ext_resource type="PackedScene" uid="uid://byd8flmhpjb7s" path="res://Scenes/button.tscn" id="8_p6pjf"]
 [ext_resource type="PackedScene" uid="uid://ce6611p4syrke" path="res://Scenes/color_filter.tscn" id="9_m7vvj"]
-[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="9_nfsas"]
+[ext_resource type="PackedScene" uid="uid://bfj4p68u35l23" path="res://Scenes/ArrowButton.tscn" id="9_nfsas"]
 [ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="11_kg31f"]
 [ext_resource type="PackedScene" uid="uid://bbyekb6dfvqox" path="res://visual_assets/gate.tscn" id="12_ncjpd"]
 
@@ -78,24 +78,6 @@ editor_draw_limits = true
 stream = ExtResource("6_kg31f")
 volume_db = -15.0
 bpm = 120
-
-[node name="P1BeatSpawn" type="Node2D" parent="." unique_id=1049024763]
-position = Vector2(-2595, -1744)
-
-[node name="P2BeatSpawn" type="Node2D" parent="." unique_id=1246772108]
-position = Vector2(2605, -1744)
-
-[node name="P1BeatTracker" parent="." unique_id=44705561 instance=ExtResource("9_nfsas")]
-z_index = 11
-position = Vector2(-2600, 0)
-scale = Vector2(5, 5)
-playerNum = 1
-
-[node name="P2BeatTracker" parent="." unique_id=1686373350 instance=ExtResource("9_nfsas")]
-z_index = 1
-position = Vector2(2600, 0)
-scale = Vector2(5, 5)
-playerNum = 2
 
 [node name="Button" parent="." unique_id=793311492 node_paths=PackedStringArray("targetObject") instance=ExtResource("8_p6pjf")]
 z_index = 2
@@ -180,6 +162,26 @@ filterOver = NodePath("../gate3")
 [node name="winZone" parent="." unique_id=914968524 instance=ExtResource("3_m7vvj")]
 position = Vector2(-3, -2)
 next_level = 4
+
+[node name="P1BeatSpawn" type="Node2D" parent="." unique_id=1719654757]
+position = Vector2(-2595, -1637)
+scale = Vector2(5, 5)
+
+[node name="P2BeatSpawn" type="Node2D" parent="." unique_id=1993625704]
+position = Vector2(2605, -1637)
+scale = Vector2(5, 5)
+
+[node name="P1BeatTracker" parent="." unique_id=1958369889 instance=ExtResource("9_nfsas")]
+z_index = 1
+position = Vector2(-3.0000153, -1637)
+scale = Vector2(5, 5)
+playerNum = 1
+
+[node name="P2BeatTracker" parent="." unique_id=2043110883 instance=ExtResource("9_nfsas")]
+z_index = 1
+position = Vector2(-3.0000002, -1637)
+scale = Vector2(5, 5)
+playerNum = 2
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]

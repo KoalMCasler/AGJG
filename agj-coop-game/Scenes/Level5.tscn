@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b2jn4kd2p6c1v" path="res://visual_assets/player-visual.tscn" id="3_ytef6"]
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="4_cwt8c"]
 [ext_resource type="AudioStream" uid="uid://7ow04dngflo3" path="res://Sounds/checkpoint.mp3" id="6_4kscp"]
-[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="6_7x805"]
+[ext_resource type="PackedScene" uid="uid://bfj4p68u35l23" path="res://Scenes/ArrowButton.tscn" id="6_7x805"]
 [ext_resource type="PackedScene" uid="uid://ccgdbo6wdth8f" path="res://visual_assets/statue.tscn" id="8_rbgxu"]
 [ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="9_4kscp"]
 
@@ -25,7 +25,7 @@ player1Input = NodePath("P1BeatTracker")
 player2Input = NodePath("P2BeatTracker")
 player1 = NodePath("player1")
 player2 = NodePath("player2")
-beatOffsetVal = 5.0
+beatOffsetVal = 5.8
 p1BSpawn = NodePath("P1BeatSpawn")
 p2Bspawn = NodePath("P2BeatSpawn")
 
@@ -65,7 +65,7 @@ game = NodePath("..")
 playerNum = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1663927216]
-position = Vector2(-3, -32)
+position = Vector2(-3, -160)
 zoom = Vector2(0.33, 0.33)
 editor_draw_limits = true
 
@@ -73,26 +73,6 @@ editor_draw_limits = true
 stream = ExtResource("6_4kscp")
 volume_db = -15.0
 bpm = 120
-
-[node name="P1BeatSpawn" type="Node2D" parent="." unique_id=1049024763]
-position = Vector2(-2595, -1664)
-scale = Vector2(5, 5)
-
-[node name="P2BeatSpawn" type="Node2D" parent="." unique_id=1246772108]
-position = Vector2(2605, -1664)
-scale = Vector2(5, 5)
-
-[node name="P1BeatTracker" parent="." unique_id=44705561 instance=ExtResource("6_7x805")]
-z_index = 11
-position = Vector2(-2600, 0)
-scale = Vector2(5, 5)
-playerNum = 1
-
-[node name="P2BeatTracker" parent="." unique_id=1686373350 instance=ExtResource("6_7x805")]
-z_index = 1
-position = Vector2(2600, 0)
-scale = Vector2(5, 5)
-playerNum = 2
 
 [node name="statue" parent="." unique_id=863541795 instance=ExtResource("8_rbgxu")]
 position = Vector2(-1402, 800)
@@ -115,6 +95,26 @@ position = Vector2(1413, -992)
 [node name="winZone" parent="." unique_id=914968524 instance=ExtResource("3_rbgxu")]
 position = Vector2(-3, 2)
 next_level = 6
+
+[node name="P1BeatSpawn" type="Node2D" parent="." unique_id=1393284057]
+position = Vector2(-2595, -1669)
+scale = Vector2(5, 5)
+
+[node name="P2BeatSpawn" type="Node2D" parent="." unique_id=542936003]
+position = Vector2(2605, -1669)
+scale = Vector2(5, 5)
+
+[node name="P1BeatTracker" parent="." unique_id=1958369889 instance=ExtResource("6_7x805")]
+z_index = 1
+position = Vector2(-3.0000153, -1669)
+scale = Vector2(5, 5)
+playerNum = 1
+
+[node name="P2BeatTracker" parent="." unique_id=1585704152 instance=ExtResource("6_7x805")]
+z_index = 1
+position = Vector2(-3.0000002, -1669)
+scale = Vector2(5, 5)
+playerNum = 2
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccdaqjl36744o" path="res://Scenes/Conductor.tscn" id="7_ug0sv"]
 [ext_resource type="AudioStream" uid="uid://2v4f8tae8nnd" path="res://Sounds/lydian_mastered.mp3" id="8_0wsr5"]
 [ext_resource type="PackedScene" uid="uid://c2dmbawu8qxkm" path="res://Scenes/End.tscn" id="8_6ll4n"]
-[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="9_jgorv"]
+[ext_resource type="PackedScene" uid="uid://bfj4p68u35l23" path="res://Scenes/ArrowButton.tscn" id="9_jgorv"]
 
 [node name="Level1" type="Control" unique_id=260818078 node_paths=PackedStringArray("player1Input", "player2Input", "player1", "player2", "p1BSpawn", "p2Bspawn")]
 layout_mode = 3
@@ -76,22 +76,22 @@ volume_db = -15.0
 bpm = 120
 
 [node name="P1BeatSpawn" type="Node2D" parent="." unique_id=1049024763]
-position = Vector2(-2600, -1536)
+position = Vector2(-2595, -1408)
 scale = Vector2(5, 5)
 
 [node name="P2BeatSpawn" type="Node2D" parent="." unique_id=1246772108]
-position = Vector2(2600, -1536)
+position = Vector2(2605, -1408)
 scale = Vector2(5, 5)
 
 [node name="P1BeatTracker" parent="." unique_id=44705561 instance=ExtResource("9_jgorv")]
-z_index = 11
-position = Vector2(-2600, 0)
+z_index = 1
+position = Vector2(-3.0000153, -1408)
 scale = Vector2(5, 5)
 playerNum = 1
 
 [node name="P2BeatTracker" parent="." unique_id=1686373350 instance=ExtResource("9_jgorv")]
 z_index = 1
-position = Vector2(2600, 0)
+position = Vector2(-3.0000002, -1408)
 scale = Vector2(5, 5)
 playerNum = 2
 

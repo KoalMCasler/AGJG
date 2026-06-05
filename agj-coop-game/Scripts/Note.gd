@@ -1,4 +1,5 @@
 extends Area2D
+class_name Note
 
 var SPAWN = Vector2(0,0)
 
@@ -7,6 +8,7 @@ var playerNum = 0
 var speed = 0
 var hit = false
 var screenLimit = 0
+var limitOffset = 100
 
 var GameVar
 
@@ -17,13 +19,21 @@ func _ready():
 
 func _physics_process(delta):
 	if !hit:
-		position.y += speed * delta
-		if position.y > screenLimit + 30:
-			destroy(1)
-			queue_free()
+		if playerNum == 1:
+			position.x += speed * delta
+			if position.x > screenLimit + limitOffset:
+				destroy(1)
+				queue_free()
+		elif playerNum == 2:
+			position.x -= speed * delta
+			if position.x < -screenLimit + -limitOffset:
+				destroy(1)
+				queue_free()
 	else:
-		$Node2D.position.y -= speed * delta
-
+		if playerNum == 1:
+			$Node2D.position.x += speed * delta
+		elif playerNum == 2:
+			$Node2D.position.x -= speed * delta
 
 func initialize(num, game):
 	playerNum = num
@@ -31,12 +41,12 @@ func initialize(num, game):
 	var DIST_TO_TARGET = 0.0
 	if playerNum == 1:
 		SPAWN = GameVar.p1BSpawn.position
-		DIST_TO_TARGET = GameVar.player1Input.position.y - SPAWN.y
-		screenLimit = GameVar.player1Input.position.y
+		DIST_TO_TARGET = GameVar.player1Input.position.x - SPAWN.x
+		screenLimit = GameVar.player1Input.position.x
 	elif playerNum == 2:
 		SPAWN = GameVar.p2Bspawn.position
-		DIST_TO_TARGET = GameVar.player2Input.position.y - SPAWN.y
-		screenLimit = GameVar.player2Input.position.y
+		DIST_TO_TARGET = GameVar.player2Input.position.x + SPAWN.x
+		screenLimit = GameVar.player2Input.position.x
 	$AnimatedSprite2D.frame = 1
 	position = SPAWN
 	speed = DIST_TO_TARGET / 2.0

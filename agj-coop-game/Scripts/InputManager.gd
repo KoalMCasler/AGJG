@@ -200,6 +200,7 @@ func _on_OkayArea_area_exited(area):
 
 func _on_PushTimer_timeout():
 	frame = 2
+	
 
 
 func _reset():
